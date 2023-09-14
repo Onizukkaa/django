@@ -1,0 +1,14 @@
+{% extends "listings/base.html" %}
+{% block content %}
+        <h1>Listing !</h1>
+        <p>Mon listing</p>
+        <!-- TODO : liste des groupes -->
+        <p>Mon listing contient {{ listing | length }} groupes</p>
+        <ul>
+            {% for list in listing %}
+            <li>
+                {{ list.name | upper }}
+            </li>
+            {% endfor %}
+        </ul>
+{% endblock %}
